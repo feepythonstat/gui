@@ -1,0 +1,59 @@
+
+
+Get /activities:
+
+{
+"user_id": " ",
+"user_name": " ",
+"activities": [
+  {
+    "act_id": "1",
+    "act_title": "(link to the individual page)",
+    "act_url": "http://any.firebase.com/user/activity/1",
+    "created_on": ""
+  }
+  {
+    "act_id": "2",
+    "act_title": "(link to the individual page)",
+    "act_url": "http://any.firebase.com/user/activity/2",
+    "created_on": ""
+  }
+
+]
+
+}
+
+Post /activities
+
+{
+  "user_id": 3,
+  "act_title": "Push Ups",
+  "act_description": "My target is 200 push ups a day"
+}
+
+Get /activities/{"id"}
+
+{
+  "user_id": 2,
+  "act_id": 23,
+  "act_title": "Push Ups",
+  "act_description": "My target is 200 push ups a day",
+  "created_on":  "20151027",
+  "daily_stats": [
+    {
+      "stat_id": 33487298734,
+      "date_done": 20151027,
+      "count": 50,
+    },
+    {
+      "stat_id": 389479807,
+      "date_done": 20151028,
+      "count": 60,
+    },
+    {
+      "stat_id": 33487298734,
+      "date_done": 20151029,
+      "count": 65,
+    },
+  ]
+}
