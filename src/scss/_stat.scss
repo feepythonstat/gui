@@ -1,0 +1,49 @@
+
+div.page-stat {
+    width: 100%;
+    margin: 0px 0px;
+  section.stat-detail{
+    display: block;
+    text-align: center;
+    padding-bottom: 5ex;
+    h3.act-title{
+      text-align: center;
+      font-size: 2em;
+    }
+    p.act-description{
+      text-align: center;
+      font-size: 1em;
+      text-shadow: 1px 1px 5px #000000;
+      font-weight: 200;
+      font-style: italic;
+      margin-top: -30px;
+    }
+
+  } //section welcome
+  section.stat-detail{
+    display: block;
+    padding-top: 2ex;
+    span.your-stat{
+      text-align: center;
+      display: block;
+    }
+    ul.stat {
+      width: 90%;
+      list-style: none;
+      text-align: left;
+      li.stat-day{
+        background-color: #376883;
+        padding-left: 2em;
+        p.stat-date{
+          font-weight: 200;
+          font-style: italic;
+        }
+        p.act-description{
+          font-weight: 400;
+          font-style: italic;
+        }
+      }
+    }
+
+  }
+}

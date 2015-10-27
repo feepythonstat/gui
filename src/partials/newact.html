@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>DYEL - Do you even lift?</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,16 +16,27 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-      <header class="common">
-        <a class="logo" href="#home"><i class="fa fa-child"></i></a>
-        <span class="all-logo-text">
-          <h2 class="logo-text">DYEL</h2>
-          <h4 class="sublogo-text">Do you even lift?</h4>
-        </span>
-        <span class="bar"><i class="fa fa-bars"></i></span>
-      </header>
-
         <main class="container">
+          <div class="page-newact">
+
+
+            <section class="new-act">
+              <h3 class="new-act">What activity you wanna track?</h3>
+              <form class="new-act">
+                <input id="act-title" type="text" placeholder="I want to..."/>
+                <textarea type="text" class="description-box" name="comment-name" placeholder="More details here..." ng-model="askNew.body"></textarea>
+                <input class="comment-submit" type="submit" value="Do it!">
+              </form>
+              <a href="#home" class="cancel">
+                <i class="fa fa-arrow-circle-left cancel"></i>
+                <span class="cancel">Back Home</span>
+              </a>
+            </section>
+          </div>
+
+
+
+
 
         </main><!-- .container -->
 

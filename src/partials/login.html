@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>DYEL - Do you even lift?</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,16 +16,24 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-      <header class="common">
-        <a class="logo" href="#home"><i class="fa fa-child"></i></a>
-        <span class="all-logo-text">
-          <h2 class="logo-text">DYEL</h2>
-          <h4 class="sublogo-text">Do you even lift?</h4>
-        </span>
-        <span class="bar"><i class="fa fa-bars"></i></span>
-      </header>
-
         <main class="container">
+          <div class="page-login">
+            <form action="#" name="login-form" id="loginform" ng-submit="logginUser()">
+              <h1>Sign In</h1>
+              <fieldset>
+                <p><strong>Sign into Your Account</strong></p>
+                <input type="text" class="username-login" placeholder="Username"ng-model="user.username"></input> <br>
+                <input type="password" class="username-password" placeholder="Password" ng-model="user.password"></input> <br>
+                <input id="password-checkbox" type="checkbox">Keep me logged in on this computer</input> <br>
+                <a href="/#">I forgot my password...</a> <br>
+                <button type="submit" name="Log-In" id="login-button">Sign Me In</button>
+              </fieldset>
+            </form> <!-- end of #loginfrm -->
+          </div>
+
+
+
+
 
         </main><!-- .container -->
 

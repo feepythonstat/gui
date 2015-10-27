@@ -14,6 +14,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+
 }
 
 /*
@@ -104,7 +105,22 @@ $fa-font-path: '../../bower_components/font-awesome/fonts';
 *, *::before, *::after{
   box-sizing: border-box;
 }
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-smoothing: antialiased;
+  color: #EEEEEE;
+  background-image: url("../img/bg_small.jpg");
+  main.container {
+    width: 100%;
+    max-width: 600px;
+  }
+}
 
+@import "home";
+@import "newact";
+@import "stat";
+@import "login";
+@import "signup";
 
 
 
