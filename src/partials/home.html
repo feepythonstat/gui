@@ -1,6 +1,6 @@
-<div class="page-home">
+<div ng-controller="home" class="page-home">
   <section class="welcome">
-    <h3 class="welcome">Welcome Eric!</h3>
+    <h3 class="welcome">{{homeAll.user_id}}</h3>
     <a href="#/newact" class="new-act">
       Add New Activity
     </a>
@@ -9,12 +9,8 @@
     <span>Here are your activities:</span>
     <ul class="activity-list">
       <li class="activity-name">
-        <h4 class="act-title">Push-ups</h4>
-        <p class="act-description">My goal is to have 200 push-ups a day</p>
-      </li>
-      <li class="activity-name">
-        <h4 class="act-title">Jog</h4>
-        <p class="act-description">I will try my best to run in miles</p>
+        <h4 class="act-title">{{homeAll.act_title}}</h4>
+        <p class="act-description">{{homeALL.act_description}}</p>
       </li>
     </ul>
   </section>
