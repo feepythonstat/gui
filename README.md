@@ -1,4 +1,4 @@
-# gui
+# gui :)
 front-end side of the world
 
 Normal Mode
@@ -40,4 +40,3 @@ Front-End Specification
 The front-end will be a single-page app using AngularJS. The app will be served separately from the Python webserver.
 
 Registration and login can be on different pages than the main page (even outside of the AngularJS app) if need be.
-
