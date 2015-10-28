@@ -1,5 +1,7 @@
 //IFFE
 ;(function() {
+  var baseUrl = "https://pacific-waters-7816.herokuapp.com/";
+
   angular.module('dyel-gui', ['ngRoute'], function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -7,13 +9,21 @@
       })
       .when('/login',{
         templateUrl: 'partials/login.html',
-        controller: function(){
+        controller: function(baseUrl, $http){
           var login = this;
 
           login.user = { };
 
           login.loginUser = function () {
-
+            // $http.post(baseUrl + "/api/users/", {
+            $http.post(baseUrl + "/api/users/", {
+              Headers: {
+                Authorization: "Basic " + btoa(login.user.username + ":" + login.user.password)
+              }
+            }).then(function(){
+                $http.defaults.headers.common.Authorization = "Basic " + btoa(login.user.username + ":" + login.user.password
+              );
+            })
           }
         },
         controllerAs: 'login'
@@ -59,59 +69,6 @@
 
 
       })
-      .config(['$httpProvider', function($httpProvider){
-        $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-        $httpProvider.defaults.xsrfHEaderName = 'X-CSRFToken';
-      }])
-      .factory ('api', function($resource){
-        function add_auth_header(data, headerGetter) {
-          var headers = headerGetter();
-          headers['Authorization'] = ('Basic' + btoa(data.username + ':' + data.password));
-        }
-        return {
-          auth: $resource('api/auth\\/', {}, {
-            loin: {method: 'POST', transformRequest: add_auth_header},
-            logout: {method: 'DELETE'}
-          }),
-          user: $resource('/api/user\\/', {}, {
-            create: {method: 'POST'}
-          })
-        };
-      })
-      .contoller ('authController', function ($scope, api){
-        $sope.getCredentials = function (){
-          return {username: $scope.username, password: $scope.password};
-        };
-        $scope.login = function (){
-          api.auth.login($scope.getCredentials())
-            .$promise.
-              then (function (data){
-
-              })
-        }
-      })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 })(); //End of IFFE
