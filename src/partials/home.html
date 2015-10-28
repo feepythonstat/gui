@@ -2,15 +2,17 @@
   <section class="welcome">
     <h3 class="welcome">{{homeAll.user_id}}</h3>
     <a href="#/newact" class="new-act">
-      Add New Activity
+      <i class="fa fa-plus-circle"></i> Add New Activity
     </a>
   </section>
   <section class="activity-list">
     <span>Here are your activities:</span>
     <ul class="activity-list">
       <li class="activity-name">
+        <i class="fa fa-arrow-circle-o-right"></i>
         <h4 class="act-title">{{homeAll.act_title}}</h4>
-        <p class="act-description">{{homeALL.act_description}}</p>
+        <p class="act-description">{{homeAll.act_description}}</p>
+        <p class="act-created">Started on Oct 27, 2015</p>
       </li>
     </ul>
   </section>

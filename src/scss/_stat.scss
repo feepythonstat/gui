@@ -6,6 +6,7 @@ div.page-stat {
     display: block;
     text-align: center;
     padding-bottom: 5ex;
+    padding-top: 2ex;
     h3.act-title{
       text-align: center;
       font-size: 2em;
@@ -18,32 +19,68 @@ div.page-stat {
       font-style: italic;
       margin-top: -30px;
     }
-
+    form.new-stat{
+      width: 90%;
+      margin: 0px auto;
+      span.new-stat{
+        font-size: 1em;
+        display: block;
+      }
+      input#count{
+        display: inline-block;
+        width: 3em;
+        height: 36px;
+      }
+      input.count-submit{
+        cursor: pointer;
+        background-color: #376883;
+        color: #ffffff;
+        padding: 10px 6px;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
   } //section welcome
-  section.stat-detail{
-    display: block;
-    padding-top: 2ex;
     span.your-stat{
+      margin-top: 5ex;
+      margin-right: auto;
+      margin-left: auto;
       text-align: center;
       display: block;
     }
     ul.stat {
       width: 90%;
+      margin: 0 auto;
       list-style: none;
       text-align: left;
+      padding-left: 0px;
+      padding-right: 0px;
       li.stat-day{
         background-color: #376883;
-        padding-left: 2em;
+        i.fa-minus-circle{
+          float: right;
+          font-size: 1.5em;
+          margin-top: 3px;
+          margin-right: 5px;
+        }
         p.stat-date{
+          margin-bottom: 2px;
+          margin-top: 0.5em;
           font-weight: 200;
           font-style: italic;
+          text-align: center;
         }
-        p.act-description{
+        p.stat-count{
+          font-size: 3em;
           font-weight: 400;
-          font-style: italic;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          text-align: center;
         }
       }
     }
-
-  }
 }
