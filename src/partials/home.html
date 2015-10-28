@@ -8,9 +8,9 @@
   <section class="activity-list">
     <span>Here are your activities:</span>
     <ul class="activity-list">
-      <li class="activity-name">
-        <h4 class="act-title">{{homeAll.act_title}}</h4>
-        <p class="act-description">{{homeALL.act_description}}</p>
+      <li ng-repeat="activity in activities" class="activity-name">
+        <h4 class="act-title">{{homeAll.activity}</h4>
+        <p class="act-description">{{homeALL.activity}}</p>
       </li>
     </ul>
   </section>
