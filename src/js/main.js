@@ -16,7 +16,7 @@
 
           login.loginUser = function () {
             // $http.post(baseUrl + "/api/users/", {
-            $http.post(baseUrl + "/api/users/", {
+            $http.post("http://requestb.in/1hqrpmg1", {
               Headers: {
                 Authorization: "Basic " + btoa(login.user.username + ":" + login.user.password)
               }
