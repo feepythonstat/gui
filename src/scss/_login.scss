@@ -12,14 +12,22 @@
   margin: 0 auto;
   width: 100%;
   border-radius: .3em;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
+  padding-left: 95px;
+  margin-left: 30px;
+  opacity: .8;
 
 }
+
 
 h1 {
   padding-top: 13px;
   padding-left: 30px;
-  text-align: center;
+  text-align: left;
+}
+
+p#sign-in-title {
+  padding-left: 75px;
 }
 
 input* {

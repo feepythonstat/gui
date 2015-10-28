@@ -64,9 +64,10 @@ div.page-home {
       color: #ffffff;
       box-shadow: 0 3px 0 #ffffff;
       padding: 10px 16px;
+      opacity: .8;
       text-decoration: none;
       &:hover { //doesnt work in mobile obviously
-        background: #28AADC;
+        background: #2c5368;
       }
     }
   } //section welcome
