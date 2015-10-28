@@ -2,6 +2,9 @@
 ;(function() {
   angular.module('dyel-gui', ['ngRoute'], function($routeProvider) {
     $routeProvider
+      .when('/', {
+        redirectTo: '/login'
+      })
       .when('/login',{
         templateUrl: 'partials/login.html',
         controller: function(){
@@ -30,8 +33,12 @@
       })
       .when('/home', {
         templateUrl: 'partials/home.html',
-        controller: function() {
-
+        controller: function($http) {
+          $http.get('https://pacific-waters-7816.herokuapp.com/api/activities/')
+            .then(function(response) {
+              var homeAll = response.data;
+              console.log(homeAll);
+            })
         },
         controllerAs: 'home'
       })
@@ -48,7 +55,7 @@
 
         },
         controllerAs: 'stat'
-      })
+       })
 
       })
 })(); //End of IFFE
