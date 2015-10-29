@@ -1,6 +1,6 @@
 //IFFE
 ;(function() {
-  var baseUrl = "https://pacific-waters-7816.herokuapp.com/";
+  var BASE_URL = "https://pacific-waters-7816.herokuapp.com/";
 
   angular.module('dyel-gui', ['ngRoute'], function($routeProvider) {
     $routeProvider
@@ -9,14 +9,15 @@
     })
     .when('/login',{
       templateUrl: 'partials/login.html',
-      controller: function(baseUrl, $http){
+      controller: function($http){
         var login = this;
 
         login.user = { };
 
-        login.loginUser = function () {
-          // $http.post(baseUrl + "/api/users/", {
-          $http.post("http://requestb.in/1hqrpmg1", {
+        login.submit = function () {
+          console.log(login.user);
+
+          $http.post(baseUrl + "/api/users/", login.user, {
             Headers: {
               Authorization: "Basic " + btoa(login.user.username + ":" + login.user.password)
             }
@@ -54,8 +55,21 @@
   })
   .when('/newact', {
     templateUrl: 'partials/newact.html',
-    controller: function() {
+    controller: function($http, $location) {
+        var newact = this;
 
+        newact.act = { };
+
+        newact.submit = function() {
+          console.log("yay");
+          $http.post("https://pacific-waters-7816.herokuapp.com/api/activities/", newact.act)
+            .then(
+              function() {
+              $location.path('/home');
+            }, function(){
+              console.log("error");
+            });
+        }
     },
     controllerAs: 'newact'
   })
@@ -70,5 +84,6 @@
 
 })
 
+//
 
 })(); //End of IFFE
