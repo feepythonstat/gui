@@ -15,13 +15,12 @@
         login.user = { };
 
         login.submit = function () {
-          console.log(login.user);
-
-          $http.post(BASE_URL + "/api/users/", login.user, {
-            Headers: {
+          $http.get(BASE_URL + "api/whoami", {
+            headers: {
               Authorization: "Basic " + btoa(login.user.username + ":" + login.user.password)
             }
           }).then(function(){
+            console.log("success!");
             $http.defaults.headers.common.Authorization = "Basic " + btoa(login.user.username + ":" + login.user.password
           );
         })
