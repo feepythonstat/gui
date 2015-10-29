@@ -9,7 +9,7 @@
     })
     .when('/login',{
       templateUrl: 'partials/login.html',
-      controller: function($http){
+      controller: function($http, $location){
         var login = this;
 
         login.user = { };
@@ -20,11 +20,12 @@
               Authorization: "Basic " + btoa(login.user.username + ":" + login.user.password)
             }
           }).then(function(){
-            console.log("success!");
+            $location.path('/home');
             $http.defaults.headers.common.Authorization = "Basic " + btoa(login.user.username + ":" + login.user.password
           );
         })
       }
+
     },
     controllerAs: 'login'
   })
@@ -43,11 +44,12 @@
   })
   .when('/home', {
     templateUrl: 'partials/home.html',
-    controller: function($http) {
+    controller: function($scope, $http) {
       $http.get(BASE_URL + 'api/activities/')
       .then(function(response) {
-        var homeAll = response.data;
-        console.log(homeAll);
+        $scope.activities = response.data;
+        console.log($scope.activities);
+
       })
     },
     controllerAs: 'home'

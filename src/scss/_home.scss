@@ -85,11 +85,14 @@ div.page-home {
         cursor: pointer;
         background-color: #376883;
         padding-left: 0.5em;
-        i.fa-arrow-circle-o-right{
+        margin-bottom: 2ex;
+        a.activity-name {
           float: right;
-          font-size: 1.5em;
           margin-top: 3px;
           margin-right: 5px;
+          i.fa-arrow-circle-o-right{
+            font-size: 1.5em;        
+          }
         }
         h4.act-title {
           font-size: 1.2em;
