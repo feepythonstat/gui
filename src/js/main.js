@@ -17,7 +17,7 @@
         login.submit = function () {
           console.log(login.user);
 
-          $http.post(baseUrl + "/api/users/", login.user, {
+          $http.post(BASE_URL + "/api/users/", login.user, {
             Headers: {
               Authorization: "Basic " + btoa(login.user.username + ":" + login.user.password)
             }
@@ -45,7 +45,7 @@
   .when('/home', {
     templateUrl: 'partials/home.html',
     controller: function($http) {
-      $http.get('https://pacific-waters-7816.herokuapp.com/api/activities/')
+      $http.get(BASE_URL + 'api/activities/')
       .then(function(response) {
         var homeAll = response.data;
         console.log(homeAll);
@@ -62,7 +62,7 @@
 
         newact.submit = function() {
           console.log("yay");
-          $http.post("https://pacific-waters-7816.herokuapp.com/api/activities/", newact.act)
+          $http.post(BASE_URL+"api/activities/", newact.act)
             .then(
               function() {
               $location.path('/home');
