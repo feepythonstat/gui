@@ -1,9 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="eng">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>DYEL - Do you even lift?</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,8 +16,19 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <main class="container">
+      <header class="common">
+        <a class="logo" href="#/home"><i class="fa fa-child"></i></a>
+        <span class="all-logo-text">
+          <h2 class="logo-text">DYEL</h2>
+          <h4 class="sublogo-text">Do you even lift?</h4>
+        </span>
+        <span class="bar"><i class="fa fa-bars"></i></span>
+      </header>
 
+        <main ng-app="dyel-gui" class="container">
+            <ng-view>
+
+            </ng-view>
         </main><!-- .container -->
 
         <!-- bower:js -->

@@ -1,0 +1,19 @@
+<div class="page-home">
+  <section class="welcome">
+    <h3 class="welcome">Welcome {{activities[0].act_user}}!</h3>
+    <a href="#/newact" class="new-act">
+      <i class="fa fa-plus-circle"></i> Add New Activity
+    </a>
+  </section>
+  <section class="activity-list">
+    <span>Here are your activities:</span>
+    <ul class="activity-list">
+      <li href="#/stat" ng-repeat="activity in activities" class="activity-name">
+        <a href="#/stat" class="activity-name"><i class="fa fa-arrow-circle-o-right"></i><a>
+        <h4 class="act-title">{{activity.act_title}}</h4>
+        <p class="act-description">{{activity.act_description}}</p>
+        <p class="act-created">Started on {{activity.created_on | date}}</p>
+      </li>
+    </ul>
+  </section>
+</div> <!-- end of .page-home -->

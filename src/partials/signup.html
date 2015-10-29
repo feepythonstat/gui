@@ -1,0 +1,16 @@
+<div class="page-signup">
+  <form action="#" name="create-act-form" id="create-act-form" ng-submit: createUser($form)>
+    <h1>Create a New Account</h1>
+    <fieldset>
+      <input type="text" class="new-username-fullname"placeholder="Full Name" ng-model="user.fullname"></input> <br>
+      <input type="text" class="new-username" placeholder="Username" ng-model="user.username"></input> <br>
+      <input type="password" class="new-username-password" placeholder="Password" ng-model="user.password"></input> <br>
+      <input type="password" class="new-username-password" placeholder="Re-enter Password" ng-model="user.password"></input> <br>
+      <input class="new-username-email" placeholder="Email"ng-model="user.email"></input> <br>
+      <input type="email" class="new-username-email" placeholder="Re-enter Email" ng-model="user.email"></input> <br>
+
+      <input id="password-checkbox" type="checkbox">Keep me logged in on this computer</input> <br>
+      <button type="submit" name="create" id="create-act-button">Create Account</button>
+    </fieldset>
+  </form> <!-- end of #create-act-form -->
+</div> <!-- end of .page-sign -->
