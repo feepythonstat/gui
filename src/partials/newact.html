@@ -1,10 +1,10 @@
 <div class="page-newact">
   <section class="new-act">
     <h3 class="new-act">What activity you wanna track?</h3>
-    <form class="new-act">
-      <input id="act-title" type="text" placeholder="I want to..."/>
-      <textarea type="text" class="description-box" name="comment-name" placeholder="More details here..." ng-model="askNew.body"></textarea>
-      <input class="comment-submit" type="submit" value="Do it!">
+    <form name="newact-form" class="new-act" ng-submit="newact.submit(newact-form)">
+      <input id="act-title" type="text" placeholder="I want to..." ng-model="newact.act.act_title"></input>
+      <textarea type="text" class="description-box" name="comment-name" placeholder="More details here..." ng-model="newact.act.act_description"></textarea>
+      <input class="comment-submit" type="submit" value="Do it!"></input>
     </form>
     <a href="#home" class="cancel">
       <i class="fa fa-arrow-circle-left cancel"></i>

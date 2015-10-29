@@ -1,6 +1,6 @@
-<div ng-controller="home" class="page-home">
+<div class="page-home">
   <section class="welcome">
-    <h3 class="welcome">{{homeAll.user_id}}</h3>
+    <h3 class="welcome">Welcome {{activities[0].act_user}}!</h3>
     <a href="#/newact" class="new-act">
       <i class="fa fa-plus-circle"></i> Add New Activity
     </a>
@@ -8,11 +8,11 @@
   <section class="activity-list">
     <span>Here are your activities:</span>
     <ul class="activity-list">
-      <li ng-repeat="activity in activities" class="activity-name">
-        <i class="fa fa-arrow-circle-o-right"></i>
-        <h4 class="act-title">{{homeAll.act_title}}</h4>
-        <p class="act-description">{{homeAll.act_description}}</p>
-        <p class="act-created">Started on Oct 27, 2015</p>
+      <li href="#/stat" ng-repeat="activity in activities" class="activity-name">
+        <a href="#/stat" class="activity-name"><i class="fa fa-arrow-circle-o-right"></i><a>
+        <h4 class="act-title">{{activity.act_title}}</h4>
+        <p class="act-description">{{activity.act_description}}</p>
+        <p class="act-created">Started on {{activity.created_on | date}}</p>
       </li>
     </ul>
   </section>

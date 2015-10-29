@@ -1,13 +1,16 @@
-<div class="page-login">
-  <form action="#" name="login-form" id="loginform" ng-submit="logginUser()">
+<div class="page-login" >
+  <form name="login-form" id="loginform" ng-submit="login.submit(login-form)">
     <h1>Sign In</h1>
     <fieldset>
       <p id="sign-line-title"><strong>Sign into Your Account</strong></p>
-      <input type="text" class="username-login" placeholder="Username"ng-model="user.username"></input> <br>
-      <input type="password" class="username-password" placeholder="Password" ng-model="user.password"></input> <br>
+      <input type="text" class="username-login" placeholder="Username" ng-model="login.user.username"></input> <br>
+      <input type="password" class="username-password" placeholder="Password" ng-model="login.user.password"></input> <br>
       <input id="password-checkbox" type="checkbox">Keep me logged in on this computer</input> <br>
       <a href="/#">I forgot my password...</a> <br>
       <button type="submit" name="Log-In" id="login-button">Sign Me In</button>
     </fieldset>
   </form> <!-- end of #loginfrm -->
 </div> <!-- end of .page-login -->
+
+
+<!-- ng-controller="login" -->
